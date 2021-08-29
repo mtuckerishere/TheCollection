@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using TheCollection.Models;
 using TheCollection.Persistance.Context;
 using TheCollection.Repository.Interfaces;
@@ -13,39 +15,28 @@ namespace TheCollection.Repository
             _dbContext = dbContext;
         }
 
-        public Task CreateLocation(Locations location)
+        public async Task CreateLocation(Locations location)
         {
-            throw new System.NotImplementedException();
+            await _dbContext.Locations.AddAsync(location);
         }
 
         public void DeleteLocation(Locations location)
         {
-            throw new System.NotImplementedException();
+            _dbContext.Locations.Remove(location);
         }
 
-        public Task<Locations> GetLocation(int locationId)
+        public async Task<Locations> GetLocation(int locationId)
         {
-            throw new System.NotImplementedException();
+            return await _dbContext.Locations.Where(x=>x.Id == locationId).FirstOrDefaultAsync();
         }
 
-        public Task<ICollection<Locations>> GetLocations()
+        public async Task<ICollection<Locations>> GetLocations()
         {
-            throw new System.NotImplementedException();
+            return await _dbContext.Locations.ToListAsync();
         }
-
-        public bool LocationExists(int locationId)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool LocationExists(string locationName)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public void UpdateLocation(Locations location)
         {
-            throw new System.NotImplementedException();
+            _dbContext.Locations.Update(location);
         }
     }
 }

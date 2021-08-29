@@ -27,3 +27,7 @@ C:\Users\micha\source\repos\TheCollection\obj\Debug\net5.0\TheCollection.dll
 C:\Users\micha\source\repos\TheCollection\obj\Debug\net5.0\ref\TheCollection.dll
 C:\Users\micha\source\repos\TheCollection\obj\Debug\net5.0\TheCollection.pdb
 C:\Users\micha\source\repos\TheCollection\obj\Debug\net5.0\TheCollection.genruntimeconfig.cache
+C:\Users\micha\source\repos\TheCollection\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\micha\source\repos\TheCollection\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\micha\source\repos\TheCollection\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\micha\source\repos\TheCollection\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
