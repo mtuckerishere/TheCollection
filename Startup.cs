@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using TheCollection.Repository;
+using TheCollection.Repository.Interfaces;
 
 namespace TheCollection
 {
@@ -28,6 +30,7 @@ namespace TheCollection
         {
 
             services.AddControllers();
+            services.AddScoped<ILocationRepository, LocationRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TheCollection", Version = "v1" });
