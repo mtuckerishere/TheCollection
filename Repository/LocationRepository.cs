@@ -11,7 +11,8 @@ namespace TheCollection.Repository
     public class LocationRepository : ILocationRepository
     {
         private readonly TheCollectionDbContext _dbContext;
-        public LocationRepository(TheCollectionDbContext dbContext){
+        public LocationRepository(TheCollectionDbContext dbContext)
+        {
             _dbContext = dbContext;
         }
 
@@ -27,7 +28,7 @@ namespace TheCollection.Repository
 
         public async Task<Locations> GetLocation(int locationId)
         {
-            return await _dbContext.Locations.Where(x=>x.Id == locationId).FirstOrDefaultAsync();
+            return await _dbContext.Locations.Where(x => x.Id == locationId).FirstOrDefaultAsync();
         }
 
         public async Task<ICollection<Locations>> GetLocations()
@@ -37,6 +38,10 @@ namespace TheCollection.Repository
         public void UpdateLocation(Locations location)
         {
             _dbContext.Locations.Update(location);
+        }
+        public async Task<bool> LocationExists(int locationId)
+        {
+            return await _dbContext.Locations.AnyAsync(x => x.Id == locationId);
         }
     }
 }

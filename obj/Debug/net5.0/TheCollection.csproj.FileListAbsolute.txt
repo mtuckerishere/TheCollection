@@ -31,3 +31,4 @@ C:\Users\micha\source\repos\TheCollection\bin\Debug\net5.0\Microsoft.EntityFrame
 C:\Users\micha\source\repos\TheCollection\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\micha\source\repos\TheCollection\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\micha\source\repos\TheCollection\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\micha\source\repos\TheCollection\obj\Debug\net5.0\TheCollection.csprojAssemblyReference.cache

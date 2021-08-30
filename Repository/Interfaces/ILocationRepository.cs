@@ -10,7 +10,9 @@ namespace TheCollection.Repository.Interfaces
         Task CreateLocation(Locations location);
         Task<Locations> GetLocation(int locationId);
         void UpdateLocation(Locations location);
-        void DeleteLocation(Locations location); 
-        
+        void DeleteLocation(Locations location);
+        Task<bool> LocationExists(int locationId);
+
+
     }
 }
